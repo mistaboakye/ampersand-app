@@ -18,7 +18,7 @@ export default function HomeScreen({ navigation }) {
           }}
         >
           <View style={styles.profileIcon}>
-            <AntDesign name="user" size={40} color="#ffffff" />
+            <AntDesign name="user" size={30} color="#ffffff" />
           </View>
         </TouchableOpacity>
       </View>
@@ -60,10 +60,10 @@ const styles = StyleSheet.create({
   },
   profileIcon: {
     marginLeft: 50,
-    marginRight: 20,
+    marginRight: 30,
   },
   homeScreenStatusContainter: {
-    flex: 0.1,
+    flex: 0.07,
     flexDirection: "row",
     backgroundColor: "red",
     alignItems: "flex-end",
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
   homeScreenStatus: {
     tintColor: "white",
     width: 200,
-    height: 50,
+    height: 40,
     resizeMode: "contain",
   },
 
@@ -99,13 +99,15 @@ const styles = StyleSheet.create({
   idTextHeading: {
     fontWeight: "bold",
     fontSize: 20,
-    paddingVertical: 10,
+    alignItems: "center",
+    justifyContent: "center",
   },
   idImage: {
-    //  resizeMode: "contain",
     width: 70,
     height: 70,
     borderRadius: 50,
+    marginLeft: 20,
+    marginHorizontal: 15,
   },
   details: {
     paddingVertical: 20,

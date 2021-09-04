@@ -105,9 +105,10 @@ const styles = StyleSheet.create({
     letterSpacing: 1,
   },
   textPlaceholder: {
+    flex: 1,
     fontSize: 17,
     paddingVertical: 10,
-    width: "100%",
+    textAlign: "right",
   },
   buttonContainer: {
     justifyContent: "center",

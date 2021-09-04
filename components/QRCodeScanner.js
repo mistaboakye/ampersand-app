@@ -29,7 +29,7 @@ export default function App({ navigation }) {
       <View style={styles.absoluteFillObject}>
         <BarCodeScanner
           onBarCodeScanned={handleBarCodeScanned}
-          style={StyleSheet.absoluteFillObject}
+          style={[StyleSheet.absoluteFill]}
         />
       </View>
 
@@ -49,13 +49,14 @@ const styles = StyleSheet.create({
   },
   absoluteFillObject: {
     flex: 0.9,
-    height: "90%",
   },
   scanInformation: {
     flex: 0.1,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
+    borderTopWidth: 1,
+    borderColor: "#dcdcdc",
   },
   scanButton: {
     borderWidth: 1,

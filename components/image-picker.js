@@ -43,12 +43,12 @@ export default function ImagePickerButton() {
   };
 
   return (
-    <ImageBackground style={styles.logo} source={{ uri: image }}>
-      <AntDesign name="user" size={80} color="#ff4747" />
-      <TouchableOpacity onPress={pickImage}>
+    <TouchableOpacity onPress={pickImage}>
+      <ImageBackground style={styles.logo} source={{ uri: image }}>
+        <AntDesign name="user" size={80} color="#ff4747" />
         <Text style={styles.logoText}>ADD PROFILE PHOTO</Text>
-      </TouchableOpacity>
-    </ImageBackground>
+      </ImageBackground>
+    </TouchableOpacity>
   );
 }
 

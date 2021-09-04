@@ -78,7 +78,7 @@ export default function App() {
         <Stack.Screen
           name="Scanner"
           component={QRCodeScanner}
-          options={{ title: null }}
+          options={{ title: null, headerShown: false }}
         />
         <Stack.Screen
           name="Member Profile"

@@ -127,8 +127,10 @@ const styles = StyleSheet.create({
     letterSpacing: 1,
   },
   textPlaceholder: {
+    flex: 1,
     fontSize: 17,
     paddingVertical: 10,
+    textAlign: "right",
   },
   buttonContainer: {
     justifyContent: "center",
