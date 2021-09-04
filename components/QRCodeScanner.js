@@ -28,7 +28,7 @@ export default function App({ navigation }) {
     <View style={styles.container}>
       <View style={styles.absoluteFillObject}>
         <BarCodeScanner
-          onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
+          onBarCodeScanned={handleBarCodeScanned}
           style={StyleSheet.absoluteFillObject}
         />
       </View>
