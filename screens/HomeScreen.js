@@ -1,22 +1,38 @@
 import React from "react";
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
+import ProfileScannner from "../components/ProfileScanner";
+import QRCodeScanner from "../components/QRCodeScanner";
+import { AntDesign } from "@expo/vector-icons";
 
-export default function HomeScreen() {
+export default function HomeScreen({ navigation }) {
   return (
     <View style={styles.mainContainer}>
+      <View style={styles.homeScreenStatusContainter}>
+        <Image
+          source={require("../assets/ampersand.png")}
+          style={styles.homeScreenStatus}
+        />
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate("Profile");
+          }}
+        >
+          <View style={styles.profileIcon}>
+            <AntDesign name="user" size={40} color="#ffffff" />
+          </View>
+        </TouchableOpacity>
+      </View>
       <View style={styles.textContainer}>
         <Text style={styles.text1}>Exchange Contct Information </Text>
         <Text style={styles.text}>
           Scan this QR code below to share your contacts
         </Text>
       </View>
+      <View style={styles.scanImage}>
+        <ProfileScannner />
+      </View>
 
-      <Image
-        source={require("../assets/qrcode.png")}
-        style={styles.scanImage}
-      />
-
-      <View style={styles.idInfromation}>
+      <View style={styles.idContainer}>
         <Image source={require("../assets/ceo.jpg")} style={styles.idImage} />
         <View>
           <Text style={styles.idTextHeading}>Mista Boakye</Text>
@@ -24,8 +40,12 @@ export default function HomeScreen() {
         </View>
       </View>
       <View style={styles.scanInformation}>
-        <Text style={styles.scanText}>Want to add a new connection?</Text>
-        <TouchableOpacity>
+        <Text>Want to add a new connection?</Text>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate("Scanner");
+          }}
+        >
           <Text style={styles.scanButton}>Scan QR</Text>
         </TouchableOpacity>
       </View>
@@ -38,6 +58,25 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "white",
   },
+  profileIcon: {
+    marginLeft: 50,
+    marginRight: 20,
+  },
+  homeScreenStatusContainter: {
+    flex: 0.1,
+    flexDirection: "row",
+    backgroundColor: "red",
+    alignItems: "flex-end",
+    justifyContent: "flex-end",
+    paddingVertical: 15,
+  },
+  homeScreenStatus: {
+    tintColor: "white",
+    width: 200,
+    height: 50,
+    resizeMode: "contain",
+  },
+
   textContainer: {
     // alignItems: "center",
     justifyContent: "center",
@@ -46,13 +85,11 @@ const styles = StyleSheet.create({
     marginTop: 50,
   },
   scanImage: {
-    flex: 0.5,
-    resizeMode: "contain",
-    width: 400,
+    flex: 0.4,
     justifyContent: "center",
-    alignItems: "center",
+    marginHorizontal: 50,
   },
-  idInfromation: {
+  idContainer: {
     flex: 0.2,
     flexDirection: "row",
     alignItems: "center",
@@ -65,10 +102,10 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
   },
   idImage: {
-    resizeMode: "contain",
-    width: 100,
-    height: 100,
-    borderRadius: 200,
+    //  resizeMode: "contain",
+    width: 70,
+    height: 70,
+    borderRadius: 50,
   },
   details: {
     paddingVertical: 20,
@@ -100,5 +137,4 @@ const styles = StyleSheet.create({
     color: "#c20000",
     marginHorizontal: 10,
   },
-  scanText: {},
 });

@@ -14,19 +14,6 @@ import ImagePickerButton from "../components/image-picker";
 export default function RegisterScreen({ navigation }) {
   return (
     <ScrollView style={styles.mainContainer}>
-      {/* image code */}
-      {/* <View style={styles.editPhoto}>
-        <ImageBackground
-          source={require("../assets/ceo.jpg")}
-          style={styles.logo}
-        >
-          <TouchableOpacity>
-            <Text style={styles.logoText}>EDIT PROFILE PHOTO</Text>
-          </TouchableOpacity>
-        </ImageBackground>
-      </View> */}
-      {/* icon code */}
-
       <ImagePickerButton />
 
       {/* form */}
@@ -96,21 +83,7 @@ const styles = StyleSheet.create({
   editPhoto: {
     flex: 0.4,
   },
-  //  <ImageBackground>
 
-  // logo: {
-  //   resizeMode: "cover",
-  //   width: 420,
-  //   height: 300,
-  //   alignItems: "center",
-  //   justifyContent: "center",
-  // },
-  // logoText: {
-  //   color: "#FFFFFF",
-  //   borderWidth: 1,
-  //   borderColor: "white",
-  //   padding: 7,
-  // },
   // icon styling
 
   logo: {

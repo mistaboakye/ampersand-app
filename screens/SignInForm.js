@@ -9,7 +9,7 @@ import {
   ScrollView,
 } from "react-native";
 
-export default function SignInForm() {
+export default function SignInForm({ navigation }) {
   return (
     <ScrollView style={styles.mainContainer}>
       {/* Cover Imagw */}
@@ -35,7 +35,12 @@ export default function SignInForm() {
             secureTextEntry={true}
           />
         </View>
-        <TouchableOpacity style={styles.buttonContainer}>
+        <TouchableOpacity
+          style={styles.buttonContainer}
+          onPress={() => {
+            navigation.navigate("Home Screen");
+          }}
+        >
           <Text style={styles.buttonText}>
             S I G N <Text /> I N
           </Text>
@@ -102,6 +107,7 @@ const styles = StyleSheet.create({
   textPlaceholder: {
     fontSize: 17,
     paddingVertical: 10,
+    width: "100%",
   },
   buttonContainer: {
     justifyContent: "center",

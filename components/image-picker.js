@@ -60,8 +60,7 @@ const styles = StyleSheet.create({
     height: 250,
   },
   logoText: {
-    color: "#ff4747",
-    borderColor: "red",
-    borderWidth: 2,
+    color: "red",
+    margin: 10,
   },
 });
